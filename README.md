@@ -1,28 +1,20 @@
-# Moto Auto: Mechanic on Wheels
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Mobile mechanic booking site for roadside and at-home auto repair requests.
+# Run and deploy your AI Studio app
 
-## Run locally
+This contains everything you need to run your app locally.
 
-```bash
-python -m http.server 4173
-```
+View your app in AI Studio: https://ai.studio/apps/a1de6094-6ab5-42b9-80ae-b263e4c3e38a
 
-The local server runs from the static project root. Open the URL printed by the command.
+## Run Locally
 
-## Deploy
+**Prerequisites:**  Node.js
 
-This project is ready for Vercel static hosting:
 
-1. Import this GitHub repository in Vercel.
-2. Use the default framework preset `Other`.
-3. Leave the build command empty, or use `npm run build` if Vercel detects `package.json`.
-4. Set output directory to `.`.
-
-No environment variables are required for the current static booking MVP.
-
-## Scripts
-
-- `npm run dev` starts a local static server when `npm` is available.
-- `npm run build` validates that required files exist when `npm` is available.
-- `python scripts/build_check.py` validates the project without Node.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

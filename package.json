@@ -1,18 +1,34 @@
 {
-  "name": "moto-auto-mechanic-on-wheels",
-  "version": "1.0.0",
+  "name": "react-example",
   "private": true,
-  "description": "Static booking MVP for Moto Auto mobile mechanic services.",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "python -m http.server 4173",
-    "build": "python scripts/build_check.py"
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit"
   },
-  "keywords": [
-    "mobile-mechanic",
-    "auto-repair",
-    "booking",
-    "vercel"
-  ],
-  "author": "",
-  "license": "UNLICENSED"
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3",
+    "express": "^4.21.2",
+    "dotenv": "^17.2.3",
+    "motion": "^12.23.24"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3",
+    "@types/express": "^4.17.21"
+  }
 }
