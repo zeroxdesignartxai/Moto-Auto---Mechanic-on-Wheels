@@ -1,0 +1,18 @@
+{
+  "name": "moto-auto-mechanic-on-wheels",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static booking MVP for Moto Auto mobile mechanic services.",
+  "scripts": {
+    "dev": "python -m http.server 4173",
+    "build": "python scripts/build_check.py"
+  },
+  "keywords": [
+    "mobile-mechanic",
+    "auto-repair",
+    "booking",
+    "vercel"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}

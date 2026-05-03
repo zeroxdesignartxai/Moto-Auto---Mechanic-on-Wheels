@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Moto Auto sends certified mobile mechanics for diagnostics, batteries, brakes, oil service, and emergency roadside help."
+    />
+    <title>Moto Auto | Mechanic on Wheels</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Moto Auto home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>Moto Auto</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#booking">Book</a>
+      </nav>
+      <a class="nav-cta" href="#booking">Request help</a>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Certified mobile mechanics sent to your driveway or roadside.</h1>
+          <p>
+            Book diagnostics, battery help, brakes, oil service, and urgent no-start support without towing your vehicle to a shop.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#booking">Book a mechanic</a>
+            <a class="button secondary" href="tel:+15550187211">Call dispatch</a>
+          </div>
+          <dl class="trust-strip" aria-label="Service guarantees">
+            <div>
+              <dt>45 min</dt>
+              <dd>fast arrival window</dd>
+            </div>
+            <div>
+              <dt>ASE</dt>
+              <dd>certified techs</dd>
+            </div>
+            <div>
+              <dt>7 days</dt>
+              <dd>roadside coverage</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-media" aria-label="Mobile mechanic servicing a car">
+          <img
+            src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1200&q=82"
+            alt="Mechanic working under the hood of a vehicle"
+          />
+          <div class="dispatch-card">
+            <span>Live dispatch</span>
+            <strong>Next mechanic: 12 miles away</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-band" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <h2 id="services-title">Services built for real breakdowns</h2>
+          <p>Clear pricing ranges, verified parts, and repairs completed where the vehicle sits.</p>
+        </div>
+        <div class="service-grid" id="serviceGrid"></div>
+      </section>
+
+      <section class="process-section" id="process" aria-labelledby="process-title">
+        <div>
+          <h2 id="process-title">From request to repair in one clean workflow</h2>
+          <p>
+            Share the issue, confirm the service area, and receive a dispatch-ready summary. The booking tool catches missing details before you send.
+          </p>
+        </div>
+        <ol class="process-list">
+          <li><span>1</span>Choose the issue and urgency.</li>
+          <li><span>2</span>Add vehicle and location details.</li>
+          <li><span>3</span>Review the estimate and dispatch summary.</li>
+        </ol>
+      </section>
+
+      <section class="booking-section" id="booking" aria-labelledby="booking-title">
+        <div class="booking-copy">
+          <h2 id="booking-title">Request mobile service</h2>
+          <p>
+            This MVP stores requests in your browser for privacy. Connect a backend later for live dispatch, SMS, and admin workflows.
+          </p>
+        </div>
+        <form class="booking-form" id="bookingForm" novalidate>
+          <label>
+            Full name
+            <input name="name" autocomplete="name" required minlength="2" />
+          </label>
+          <label>
+            Phone
+            <input name="phone" inputmode="tel" autocomplete="tel" required pattern="^[0-9+().\\-\\s]{7,20}$" />
+          </label>
+          <label>
+            Vehicle
+            <input name="vehicle" autocomplete="off" required placeholder="2018 Toyota Camry" />
+          </label>
+          <label>
+            Service needed
+            <select name="service" required id="serviceSelect"></select>
+          </label>
+          <label>
+            Location
+            <input name="location" autocomplete="street-address" required placeholder="City, ZIP, or roadside landmark" />
+          </label>
+          <label>
+            Urgency
+            <select name="urgency" required>
+              <option value="Emergency">Emergency</option>
+              <option value="Today">Today</option>
+              <option value="Schedule">Schedule ahead</option>
+            </select>
+          </label>
+          <label class="full-span">
+            What happened?
+            <textarea name="notes" rows="4" required minlength="10" placeholder="Tell us symptoms, warning lights, and whether the car starts."></textarea>
+          </label>
+          <button class="button primary full-span" type="submit">Create dispatch request</button>
+          <p class="form-message full-span" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="request-section" aria-labelledby="requests-title">
+        <div class="section-heading">
+          <h2 id="requests-title">Saved dispatch requests</h2>
+          <p>Duplicate phone and vehicle requests are merged so dispatch does not receive repeat tickets.</p>
+        </div>
+        <div class="request-list" id="requestList"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Moto Auto: Mechanic on Wheels</span>
+      <a href="mailto:dispatch@example.com">dispatch@example.com</a>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
